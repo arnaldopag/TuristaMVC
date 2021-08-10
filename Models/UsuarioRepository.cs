@@ -19,6 +19,25 @@ namespace atividade_II.Models
             conexao.Close();
         }
 
+        public void excluir(Usuario user)
+        {
+
+            MySqlConnection conexao = new MySqlConnection(dadosConexao);
+
+            conexao.Open();
+
+            String QuerySql = "DELETE from usuario WHERE id=@id";
+
+            MySqlCommand comando = new MySqlCommand(QuerySql, conexao);
+
+            comando.Parameters.AddWithValue("@id", user.Id);
+
+            comando.ExecuteNonQuery();
+
+
+            conexao.Close();
+
+        }
 
     }
 }

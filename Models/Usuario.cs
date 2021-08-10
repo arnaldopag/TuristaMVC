@@ -17,5 +17,33 @@ namespace atividade_II.Models
             this.senha = senha;
             this.datanascimento = datanascimento;
         }
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+        public string Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
+        public string Senha
+        {
+            get { return senha; }
+            set { senha = value; }
+        }
+        public DateTime DataNascimento
+        {
+            get { return datanascimento; }
+            set { datanascimento = value; }
+        }
+
     }
+
 }

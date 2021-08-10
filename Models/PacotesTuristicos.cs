@@ -20,5 +20,37 @@ namespace atividade_II.Models
             this.saida = saida;
             this.retorno = retorno;
         }
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+        public string Origem
+        {
+            get { return Origem; }
+            set { origem = value; }
+        }
+        public string Atrativos
+        {
+            get { return atrativos; }
+            set { atrativos = value; }
+        }
+        public DateTime Saida
+        {
+            get { return saida; }
+            set { saida = value; }
+        }
+
+        public DateTime Retorno
+        {
+            get { return retorno; }
+            set { retorno = value; }
+        }
     }
 }
