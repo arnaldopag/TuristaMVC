@@ -7,19 +7,8 @@ namespace atividade_II.Models
     {
         private const string dadosConexao = "DataBase = atividadeii; Data Source = localhost; User id= root";
 
-        public void testarConexao()
+    
 
-        {
-            MySqlConnection conexao = new MySqlConnection(dadosConexao);
-
-
-            conexao.Open();
-
-            Console.WriteLine("Conexão iniciada");
-
-
-            conexao.Close();
-        }
         public List<Usuario> listar()
         {
 
@@ -96,6 +85,7 @@ namespace atividade_II.Models
             conexao.Close();
 
         }
+
         public void inserir(Usuario user)
         {
             MySqlConnection conexao = new MySqlConnection(dadosConexao);
@@ -119,5 +109,32 @@ namespace atividade_II.Models
 
         }
 
+        public Usuario buscarPorId(int id){
+
+            MySqlConnection conexao = new MySqlConnection(dadosConexao);
+
+            conexao.Open();
+
+            String QuerySql = "SELECT * FROM usuario WHERE id=@id";
+
+            MySqlCommand comando = new MySqlCommand(QuerySql, conexao);
+
+            comando.Parameters.AddWithValue("id", id);
+
+            MySqlDataReader Reader = comando.ExecuteReader(); 
+
+            int id2 = Reader.GetInt32("id");
+            string nome = Reader.GetString("nome");
+            string login = Reader.GetString("login");
+            string senha = Reader.GetString("senha");
+            DateTime dataNascimento = Reader.GetDateTime("dataNascimento");
+
+            Usuario usuarioEncontrado = new Usuario(id2, nome, login, senha, dataNascimento);
+            conexao.Close();
+            
+
+            return usuarioEncontrado;
+
+        }
     }
 }

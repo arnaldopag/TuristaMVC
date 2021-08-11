@@ -21,10 +21,6 @@ namespace atividade_II.Controllers
         public IActionResult Index()
         {
 
-            UsuarioRepository ur = new UsuarioRepository();
-            
-            ur.testarConexao(); 
-
             return View();
         }
 
