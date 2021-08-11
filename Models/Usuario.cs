@@ -7,15 +7,15 @@ namespace atividade_II.Models
         private string nome { get; set; }
         private string login { get; set; }
         private string senha { get; set; }
-        private DateTime datanascimento { get; set; }
+        private DateTime dataNascimento { get; set; }
 
-        public Usuario(int id, string nome, string login, string senha, DateTime datanascimento)
+        public Usuario(int id, string nome, string login, string senha, DateTime dataNascimento)
         {
             this.id = id;
             this.nome = nome;
             this.login = login;
             this.senha = senha;
-            this.datanascimento = datanascimento;
+            this.dataNascimento = dataNascimento;
         }
 
         public int Id
@@ -40,10 +40,9 @@ namespace atividade_II.Models
         }
         public DateTime DataNascimento
         {
-            get { return datanascimento; }
-            set { datanascimento = value; }
+            get { return dataNascimento; }
+            set { dataNascimento = value; }
         }
-
     }
 
 }
