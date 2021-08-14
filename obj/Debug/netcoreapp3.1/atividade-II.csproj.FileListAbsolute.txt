@@ -36,3 +36,4 @@ C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\ne
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\atividade-II.pdb
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\atividade-II.genruntimeconfig.cache
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Cadastro.cshtml.g.cs
+C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\PacotesTuristicos\Pacotes.cshtml.g.cs

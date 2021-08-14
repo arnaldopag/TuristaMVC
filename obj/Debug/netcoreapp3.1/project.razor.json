@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\PacotesTuristicos\\Pacotes.cshtml",
+      "TargetPath": "Views\\PacotesTuristicos\\Pacotes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
