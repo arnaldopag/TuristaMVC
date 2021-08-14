@@ -14412,13 +14412,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\Usuario\\Cadastro.cshtml",
+      "TargetPath": "Views\\Usuario\\Cadastro.cshtml",
       "FileKind": "mvc"
     },
     {
