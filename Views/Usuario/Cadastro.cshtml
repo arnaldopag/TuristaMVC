@@ -1,9 +1,9 @@
-@model Usuario;
+@model Usuario
 @{
     ViewData["Title"] = "Cadastro";
 }
 
-<form asp-action="Cadastro" method="post">
+<form asp-action="Cadastro" method="POST">
     <div>
         <label asp-for="Nome">Nome: </label>
         <input asp-for="Nome">

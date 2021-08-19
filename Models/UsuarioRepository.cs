@@ -1,140 +1,210 @@
+using System.Collections.Generic;
 using MySqlConnector;
 using System;
-using System.Collections.Generic;
+
 namespace atividade_II.Models
 {
     public class UsuarioRepository
     {
-        private const string dadosConexao = "DataBase = atividadeii; Data Source = localhost; User id= root";
+        private const string DadosConexao = "Database=atividadeii;Data Source=localhost;User Id=root";
 
-    
 
-        public List<Usuario> listar()
+
+        public Usuario ValidarLogin(Usuario user)
         {
 
-            MySqlConnection conexao = new MySqlConnection(dadosConexao);
+            MySqlConnection Conexao = new MySqlConnection(DadosConexao);
+            Conexao.Open();
 
-            conexao.Open();
+            String QuerySql = "select * from Usuario WHERE Login=@Login and Senha=@Senha";
 
-            String QuerySql = "SELECT * from usuario";
+            MySqlCommand Comando = new MySqlCommand(QuerySql, Conexao);
 
-            MySqlCommand comando = new MySqlCommand(QuerySql, conexao);
 
-            MySqlDataReader Reader = comando.ExecuteReader();
+            Comando.Parameters.AddWithValue("@Login", user.Login);
+            Comando.Parameters.AddWithValue("@Senha", user.Senha);
 
-            List<Usuario> lista = new List<Usuario>();
+
+            MySqlDataReader Reader = Comando.ExecuteReader();
+
+            Usuario UsuarioEncontrado = null;
+
+
+            if (Reader.Read())
+            {
+
+
+                UsuarioEncontrado = new Usuario();
+                UsuarioEncontrado.Id = Reader.GetInt32("Id");
+
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Nome")))
+                    UsuarioEncontrado.Nome = Reader.GetString("Nome");
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Login")))
+                    UsuarioEncontrado.Login = Reader.GetString("Login");
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Senha")))
+                    UsuarioEncontrado.Senha = Reader.GetString("Senha");
+
+                UsuarioEncontrado.DataNascimento = Reader.GetDateTime("DataNascimento");
+            }
+
+            Conexao.Close();
+            return UsuarioEncontrado;
+        }
+
+
+        public Usuario BuscarPorId(int Id)
+        {
+
+            MySqlConnection Conexao = new MySqlConnection(DadosConexao);
+            Conexao.Open();
+
+
+            String QuerySql = "select * from Usuario WHERE Id=@Id";
+
+            MySqlCommand Comando = new MySqlCommand(QuerySql, Conexao);
+
+            Comando.Parameters.AddWithValue("@Id", Id);
+
+            MySqlDataReader Reader = Comando.ExecuteReader();
+
+            Usuario UsuarioEncontrado = new Usuario();
+
+            if (Reader.Read())
+            {
+
+                UsuarioEncontrado.Id = Reader.GetInt32("Id");
+
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Nome")))
+                    UsuarioEncontrado.Nome = Reader.GetString("Nome");
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Login")))
+                    UsuarioEncontrado.Login = Reader.GetString("Login");
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Senha")))
+                    UsuarioEncontrado.Senha = Reader.GetString("Senha");
+
+                UsuarioEncontrado.DataNascimento = Reader.GetDateTime("DataNascimento");
+            }
+
+
+            Conexao.Close();
+
+            return UsuarioEncontrado;
+
+        }
+
+        public List<Usuario> Listar()
+        {
+
+
+            MySqlConnection Conexao = new MySqlConnection(DadosConexao);
+            Conexao.Open();
+
+
+            String QuerySql = "select * from Usuario";
+
+
+            MySqlCommand Comando = new MySqlCommand(QuerySql, Conexao);
+
+            MySqlDataReader Reader = Comando.ExecuteReader();
+
+            List<Usuario> Lista = new List<Usuario>();
+
 
             while (Reader.Read())
             {
-                int id = Reader.GetInt32("id");
-                string nome = Reader.GetString("nome");
-                string login = Reader.GetString("login");
-                string senha = Reader.GetString("senha");
-                DateTime dataNascimento = Reader.GetDateTime("dataNascimento");
 
-                Usuario user = new Usuario(id, nome, login, senha, dataNascimento);
+                Usuario userEncontrado = new Usuario();
+
+                userEncontrado.Id = Reader.GetInt32("Id");
+
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Nome")))
+                    userEncontrado.Nome = Reader.GetString("Nome");
+
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Login")))
+                    userEncontrado.Login = Reader.GetString("Login");
+
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Senha")))
+                    userEncontrado.Senha = Reader.GetString("Senha");
+
+                userEncontrado.DataNascimento = Reader.GetDateTime("DataNascimento");
 
 
-                lista.Add(user);
+                Lista.Add(userEncontrado);
             }
 
-            conexao.Close();
+            Conexao.Close();
 
-            return lista;
+            return Lista;
+
         }
 
-        public void excluir(Usuario user)
+        public void Inserir(Usuario user)
         {
 
-            MySqlConnection conexao = new MySqlConnection(dadosConexao);
 
-            conexao.Open();
-
-            String QuerySql = "DELETE from usuario WHERE id=@id";
-
-            MySqlCommand comando = new MySqlCommand(QuerySql, conexao);
-
-            comando.Parameters.AddWithValue("@id", user.Id);
-
-            comando.ExecuteNonQuery();
+            MySqlConnection Conexao = new MySqlConnection(DadosConexao);
+            Conexao.Open();
 
 
-            conexao.Close();
+            String QuerySql = "insert into Usuario (Nome,Login,Senha,DataNascimento) values (@Nome,@Login,@Senha,@DataNascimento)";
 
+
+            MySqlCommand Comando = new MySqlCommand(QuerySql, Conexao);
+
+
+            Comando.Parameters.AddWithValue("@Nome", user.Nome);
+            Comando.Parameters.AddWithValue("@Login", user.Login);
+            Comando.Parameters.AddWithValue("@Senha", user.Senha);
+            Comando.Parameters.AddWithValue("@DataNascimento", user.DataNascimento);
+
+
+            Comando.ExecuteNonQuery();
+
+            Conexao.Close();
         }
 
-        public void alterar(Usuario user)
+        public void Alterar(Usuario user)
         {
-            MySqlConnection conexao = new MySqlConnection(dadosConexao);
-
-            conexao.Open();
-
-            String QuerySql = "UPDATE from usuario set nome=@nome, login=@login, senha=@senha, datanascimento=@dataNascimento, Where id=@id";
-
-            MySqlCommand comando = new MySqlCommand(QuerySql, conexao);
-
-            comando.Parameters.AddWithValue("@id", user.Id);
-            comando.Parameters.AddWithValue("@nome", user.Nome);
-            comando.Parameters.AddWithValue("@login", user.Login);
-            comando.Parameters.AddWithValue("@senha", user.Senha);
-            comando.Parameters.AddWithValue("@dataNascimento", user.DataNascimento);
-
-            comando.ExecuteNonQuery();
 
 
-            conexao.Close();
+            MySqlConnection Conexao = new MySqlConnection(DadosConexao);
+            Conexao.Open();
 
+
+            String QuerySql = "update Usuario set Nome=@Nome, Login=@Login, Senha=@Senha, DataNascimento=@DataNascimento WHERE Id=@Id";
+
+            MySqlCommand Comando = new MySqlCommand(QuerySql, Conexao);
+
+            Comando.Parameters.AddWithValue("@Id", user.Id);
+            Comando.Parameters.AddWithValue("@Nome", user.Nome);
+            Comando.Parameters.AddWithValue("@Login", user.Login);
+            Comando.Parameters.AddWithValue("@Senha", user.Senha);
+            Comando.Parameters.AddWithValue("@DataNascimento", user.DataNascimento);
+
+
+            Comando.ExecuteNonQuery();
+
+            Conexao.Close();
         }
 
-        public void inserir(Usuario user)
+        public void Excluir(Usuario user)
         {
-            MySqlConnection conexao = new MySqlConnection(dadosConexao);
-
-            conexao.Open();
-
-            String QuerySql = "INSERT INTO usuario (nome, login, senha, datanascimento,)VALUES(@nome,@login,@senha,@dataNascimento)";
-
-            MySqlCommand comando = new MySqlCommand(QuerySql, conexao);
-
-            comando.Parameters.AddWithValue("@id", user.Id);
-            comando.Parameters.AddWithValue("@nome", user.Nome);
-            comando.Parameters.AddWithValue("@login", user.Login);
-            comando.Parameters.AddWithValue("@senha", user.Senha);
-            comando.Parameters.AddWithValue("@dataNascimento", user.DataNascimento);
-
-            comando.ExecuteNonQuery();
 
 
-            conexao.Close();
+            MySqlConnection Conexao = new MySqlConnection(DadosConexao);
+            Conexao.Open();
 
+
+            String QuerySql = "delete from Usuario WHERE Id=@Id";
+
+            MySqlCommand Comando = new MySqlCommand(QuerySql, Conexao);
+
+
+            Comando.Parameters.AddWithValue("@Id", user.Id);
+
+            Comando.ExecuteNonQuery();
+
+            Conexao.Close();
         }
 
-        public Usuario buscarPorId(int id){
-
-            MySqlConnection conexao = new MySqlConnection(dadosConexao);
-
-            conexao.Open();
-
-            String QuerySql = "SELECT * FROM usuario WHERE id=@id";
-
-            MySqlCommand comando = new MySqlCommand(QuerySql, conexao);
-
-            comando.Parameters.AddWithValue("id", id);
-
-            MySqlDataReader Reader = comando.ExecuteReader(); 
-
-            int id2 = Reader.GetInt32("id");
-            string nome = Reader.GetString("nome");
-            string login = Reader.GetString("login");
-            string senha = Reader.GetString("senha");
-            DateTime dataNascimento = Reader.GetDateTime("dataNascimento");
-
-            Usuario usuarioEncontrado = new Usuario(id2, nome, login, senha, dataNascimento);
-            conexao.Close();
-            
-
-            return usuarioEncontrado;
-
-        }
     }
 }

@@ -14417,6 +14417,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\Usuario\\Listar.cshtml",
+      "TargetPath": "Views\\Usuario\\Listar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -14429,6 +14434,16 @@
     {
       "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\Usuario\\Editar.cshtml",
+      "TargetPath": "Views\\Usuario\\Editar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\Views\\Usuario\\Login.cshtml",
+      "TargetPath": "Views\\Usuario\\Login.cshtml",
       "FileKind": "mvc"
     },
     {
