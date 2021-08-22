@@ -35,6 +35,8 @@ namespace atividade_II.Models
                     PacoteEncontrado.Nome = Reader.GetString("Nome");
                 if (!Reader.IsDBNull(Reader.GetOrdinal("Origem")))
                     PacoteEncontrado.Origem = Reader.GetString("Origem");
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Destino")))
+                    PacoteEncontrado.Origem = Reader.GetString("Destino");
                 if (!Reader.IsDBNull(Reader.GetOrdinal("Atrativos")))
                     PacoteEncontrado.Atrativos = Reader.GetString("Atrativos");
 
@@ -78,6 +80,8 @@ namespace atividade_II.Models
                     PacoteEncontrado.Nome = Reader.GetString("Nome");
                 if (!Reader.IsDBNull(Reader.GetOrdinal("Origem")))
                     PacoteEncontrado.Origem = Reader.GetString("Origem");
+                if (!Reader.IsDBNull(Reader.GetOrdinal("Destino")))
+                    PacoteEncontrado.Origem = Reader.GetString("Destino");
                 if (!Reader.IsDBNull(Reader.GetOrdinal("Atrativos")))
                     PacoteEncontrado.Atrativos = Reader.GetString("Atrativos");
 
@@ -101,7 +105,7 @@ namespace atividade_II.Models
             Conexao.Open();
 
 
-            String QuerySql = "insert into Usuario (nome,origem,atrativos,saida,retorno) values (@nome,@origem,@atrativos,@Dsaida,@retorno)";
+            String QuerySql = "insert into Usuario (nome,origem,atrativos,saida,retorno,destino) values (@nome,@origem,@atrativos,@Dsaida,@retorno,@destino)";
 
 
             MySqlCommand Comando = new MySqlCommand(QuerySql, Conexao);
@@ -109,6 +113,7 @@ namespace atividade_II.Models
 
             Comando.Parameters.AddWithValue("@nome", pacote.Nome);
             Comando.Parameters.AddWithValue("@origem", pacote.Origem);
+            Comando.Parameters.AddWithValue("@destino", pacote.Destino);
             Comando.Parameters.AddWithValue("@atrativos", pacote.Atrativos);
             Comando.Parameters.AddWithValue("@saida", pacote.Saida);
             Comando.Parameters.AddWithValue("@retorno", pacote.Retorno);
@@ -127,13 +132,14 @@ namespace atividade_II.Models
             Conexao.Open();
 
 
-            String QuerySql = "update pacotesturisticos set nome=@nome, origem=@origem, atrativos=@atrativos,saida=@saida, retorno=@retorno WHERE Id=@Id";
+            String QuerySql = "update pacotesturisticos set nome=@nome, origem=@origem,destino=@destino, atrativos=@atrativos,saida=@saida, retorno=@retorno WHERE Id=@Id";
 
             MySqlCommand Comando = new MySqlCommand(QuerySql, Conexao);
 
 
             Comando.Parameters.AddWithValue("@nome", pacote.Nome);
             Comando.Parameters.AddWithValue("@origem", pacote.Origem);
+            Comando.Parameters.AddWithValue("@Destino", pacote.Destino);
             Comando.Parameters.AddWithValue("@atrativos", pacote.Atrativos);
             Comando.Parameters.AddWithValue("@saida", pacote.Saida);
             Comando.Parameters.AddWithValue("@retorno", pacote.Retorno);

@@ -8,7 +8,7 @@ namespace atividade_II.Controllers
     public class UsuarioController : Controller
     {
 
-       
+
 
         public IActionResult Login()
         {
@@ -41,7 +41,7 @@ namespace atividade_II.Controllers
 
         public IActionResult Logout()
         {
-            //objetivo é limpar os dados da sessao
+          
             HttpContext.Session.Clear();
             return View("Login");
         }

@@ -21,9 +21,7 @@ C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\ne
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\atividade-II.TagHelpers.output.cache
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\atividade-II.RazorCoreGenerate.cache
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\atividade-II.RazorTargetAssemblyInfo.cache
@@ -38,5 +36,8 @@ C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\ne
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Cadastro.cshtml.g.cs
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\PacotesTuristicos\Pacotes.cshtml.g.cs
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Editar.cshtml.g.cs
-C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Listar.cshtml.g.cs
 C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-II\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Login.cshtml.g.cs
+C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-ii\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Lista.cshtml.g.cs
+C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-ii\obj\Debug\netcoreapp3.1\Razor\Views\PacotesTuristicos\Cadastro.cshtml.g.cs
+C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-ii\obj\Debug\netcoreapp3.1\Razor\Views\PacotesTuristicos\Editar.cshtml.g.cs
+C:\Users\dinhu\OneDrive\Documentos\cursoSenac\modulo04\atividade-ii\obj\Debug\netcoreapp3.1\Razor\Views\PacotesTuristicos\Lista.cshtml.g.cs

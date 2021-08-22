@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\atividade-II.csproj": {}
+    "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\atividade-II.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\atividade-II.csproj": {
+    "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\atividade-II.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\atividade-II.csproj",
+        "projectUniqueName": "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\atividade-II.csproj",
         "projectName": "atividade-II",
-        "projectPath": "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\atividade-II.csproj",
+        "projectPath": "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\atividade-II.csproj",
         "packagesPath": "C:\\Users\\dinhu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-II\\obj\\",
+        "outputPath": "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dinhu\\AppData\\Roaming\\NuGet\\NuGet.Config"

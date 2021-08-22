@@ -10,6 +10,7 @@ namespace atividade_II.Models
         private string atrativos { get; set; }
         private DateTime saida { get; set; }
         private DateTime retorno { get; set; }
+        private string destino { get; set; }
 
         public int Id
         {
@@ -25,6 +26,11 @@ namespace atividade_II.Models
         {
             get { return Origem; }
             set { origem = value; }
+        }
+        public string Destino
+        {
+            get { return Destino; }
+            set { destino = value; }
         }
         public string Atrativos
         {

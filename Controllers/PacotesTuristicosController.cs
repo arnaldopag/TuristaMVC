@@ -10,27 +10,36 @@ namespace atividade_II.Controllers
 
         public IActionResult Editar(int Id)
         {
-            //desenvolver o corpo do metodo
-            return View();
+            PacotesTuristicosRepository pt = new PacotesTuristicosRepository();
+            PacotesTuristicos ptLocalizado = pt.BuscarPorId(Id);
+            return View(ptLocalizado);
+
         }
 
         [HttpPost]
         public IActionResult Editar(PacotesTuristicos pac)
         {
-            //desenvolver o corpo do metodo
-            return View();
+
+            PacotesTuristicosRepository pt = new PacotesTuristicosRepository();
+            pt.Alterar(pac);
+            return RedirectToAction("Lista", "PacotesTuristicos");
+
         }
 
         public IActionResult Remover(int Id)
         {
-            //desenvolver o corpo do metodo
-            return View();
+            PacotesTuristicosRepository pt = new PacotesTuristicosRepository();
+            PacotesTuristicos PacoteLocalizado = pt.BuscarPorId(Id);
+            pt.Excluir(PacoteLocalizado);
+            return RedirectToAction("Lista", "`PacotesTuristico");
+
         }
 
         public IActionResult Lista()
         {
-            //desenvolver o corpo do metodo
-            return View();
+            PacotesTuristicosRepository pt = new PacotesTuristicosRepository();
+            List<PacotesTuristicos> listaDePacotes = pt.Listar();
+            return View(listaDePacotes);
         }
 
         public IActionResult Cadastro()
@@ -41,10 +50,13 @@ namespace atividade_II.Controllers
         [HttpPost]
         public IActionResult Cadastro(PacotesTuristicos pac)
         {
-            //desenvolver o corpo do metodo
+            PacotesTuristicosRepository pt = new PacotesTuristicosRepository();
+            pt.Inserir(pac);
+            ViewBag.Mensagem = "Cadastro realizado com sucesso!";
             return View();
         }
 
-
     }
+
+
 }
