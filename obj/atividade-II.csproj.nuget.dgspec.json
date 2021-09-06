@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\atividade-II.csproj": {}
+    "C:\\Users\\103025\\Documents\\pastaArnaldo\\projetosenac\\turistaMVC\\atividade-II.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\atividade-II.csproj": {
+    "C:\\Users\\103025\\Documents\\pastaArnaldo\\projetosenac\\turistaMVC\\atividade-II.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\atividade-II.csproj",
+        "projectUniqueName": "C:\\Users\\103025\\Documents\\pastaArnaldo\\projetosenac\\turistaMVC\\atividade-II.csproj",
         "projectName": "atividade-II",
-        "projectPath": "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\atividade-II.csproj",
-        "packagesPath": "C:\\Users\\dinhu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\obj\\",
+        "projectPath": "C:\\Users\\103025\\Documents\\pastaArnaldo\\projetosenac\\turistaMVC\\atividade-II.csproj",
+        "packagesPath": "C:\\Users\\103025\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\103025\\Documents\\pastaArnaldo\\projetosenac\\turistaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dinhu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\103025\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
         }
       }
     }

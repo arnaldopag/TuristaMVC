@@ -67,7 +67,7 @@ namespace atividade_II.Models
 
             MySqlDataReader Reader = Comando.ExecuteReader();
 
-            Usuario UsuarioEncontrado = new Usuario();
+            var UsuarioEncontrado = new Usuario();
 
             if (Reader.Read())
             {

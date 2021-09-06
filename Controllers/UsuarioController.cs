@@ -19,8 +19,8 @@ namespace atividade_II.Controllers
         public IActionResult Login(Usuario user)
         {
 
-            UsuarioRepository ur = new UsuarioRepository();
-            Usuario usuarioEncontrado = ur.ValidarLogin(user);
+            var ur = new UsuarioRepository();
+            var usuarioEncontrado = ur.ValidarLogin(user);
 
             if (usuarioEncontrado == null)
             {
@@ -54,8 +54,8 @@ namespace atividade_II.Controllers
                 return RedirectToAction("Login", "Usuario");
             }
 
-            UsuarioRepository ur = new UsuarioRepository();
-            Usuario userLocalizado = ur.BuscarPorId(Id);
+            var ur = new UsuarioRepository();
+            var userLocalizado = ur.BuscarPorId(Id);
             return View(userLocalizado);
         }
 
@@ -63,7 +63,7 @@ namespace atividade_II.Controllers
         public IActionResult Editar(Usuario user)
         {
 
-            UsuarioRepository ur = new UsuarioRepository();
+            var ur = new UsuarioRepository();
             ur.Alterar(user);
             return RedirectToAction("Lista", "Usuario");
         }
@@ -76,8 +76,8 @@ namespace atividade_II.Controllers
                 return RedirectToAction("Login", "Usuario");
             }
 
-            UsuarioRepository ur = new UsuarioRepository();
-            Usuario userLocalizado = ur.BuscarPorId(Id);
+            var ur = new UsuarioRepository();
+            var userLocalizado = ur.BuscarPorId(Id);
             ur.Excluir(userLocalizado);
             return RedirectToAction("Lista", "Usuario");
 
@@ -92,8 +92,8 @@ namespace atividade_II.Controllers
                 return RedirectToAction("Login", "Usuario");
             }
 
-            UsuarioRepository ur = new UsuarioRepository();
-            List<Usuario> listaDeUsuarios = ur.Listar();
+            var ur = new UsuarioRepository();
+            var listaDeUsuarios = ur.Listar();
             return View(listaDeUsuarios);
         }
 
@@ -107,7 +107,7 @@ namespace atividade_II.Controllers
         public IActionResult Cadastro(Usuario user)
         {
 
-            UsuarioRepository ur = new UsuarioRepository();
+            var ur = new UsuarioRepository();
             ur.Inserir(user);
             ViewBag.Mensagem = "Cadastro realizado com sucesso!";
             return View();

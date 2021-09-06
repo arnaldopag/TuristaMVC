@@ -31,7 +31,7 @@ namespace atividade_II.Controllers
             PacotesTuristicosRepository pt = new PacotesTuristicosRepository();
             PacotesTuristicos PacoteLocalizado = pt.BuscarPorId(Id);
             pt.Excluir(PacoteLocalizado);
-            return RedirectToAction("Lista", "`PacotesTuristico");
+            return RedirectToAction("Lista", "PacotesTuristicos");
 
         }
 

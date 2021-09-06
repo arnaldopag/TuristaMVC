@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yjktvBD1+/5hRiWLe+h8BPMSNcugHIaQEaI3WjQGnRoUJV1vRXzEmEab3boPqqGxh9ZLtp5lL3g4I6w+Ei3wSw==",
+  "dgSpecHash": "BCihAkJ0j1JNYlRLpkubT53ZGO7Vam5h9geNnwn3Z8jqGUWtev0csunigrAbqWEKXiklLZte/jm+9CFVuNl+tg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dinhu\\OneDrive\\Documentos\\cursoSenac\\modulo04\\atividade-ii\\atividade-II.csproj",
+  "projectFilePath": "C:\\Users\\103025\\Documents\\pastaArnaldo\\projetosenac\\turistaMVC\\atividade-II.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dinhu\\.nuget\\packages\\mysqlconnector\\1.3.11\\mysqlconnector.1.3.11.nupkg.sha512"
+    "C:\\Users\\103025\\.nuget\\packages\\mysqlconnector\\1.3.11\\mysqlconnector.1.3.11.nupkg.sha512"
   ],
   "logs": []
 }
